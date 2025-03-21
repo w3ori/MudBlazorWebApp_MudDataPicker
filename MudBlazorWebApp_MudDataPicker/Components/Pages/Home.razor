@@ -1,0 +1,29 @@
+﻿@page "/"
+
+<MudDatePicker @bind-Date="date1" Label="Date" Placeholder="Date" Variant="Variant.Outlined"
+               ImmediateText Clearable />
+
+<MudText Typo="Typo.h6">@date1</MudText>
+
+<MudDivider Class="my-5"/>
+
+
+<style>
+    /* style for ordered list */
+    ol li {
+        list-style: decimal;
+        list-style-position: inside;
+    }
+</style>
+
+<ol>
+    <li>Select a date</li>
+    <li>Clear date picker</li>
+    <li>Press any button on the keyboard</li>
+    <li>Select a date again</li>
+    <li>See that the value updated, but the MudDatePicker display value is empty</li>
+</ol>
+
+@code {
+    private DateTime? date1 = DateTime.Today;
+}
